@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::middleware('auth:sanctum')->post('/presensi-masuk', [App\Http\Controllers\API\AbsenController::class, 'presensiMasuk']);
 Route::post('/sanctum/token', [App\Http\Controllers\API\Auth\LoginController::class, 'login'])->name('login.token');

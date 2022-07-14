@@ -20,9 +20,9 @@ class LoginController extends Controller
         $user = Pegawai::where('username', $request->username)->first();
 
         if (! $user || ! Hash::check($request->password, $user->password)) {
-            return response()->json(['errors' => ['The provided credentials are incorrect.']]);
+            return response()->json(['code' => 404, "message" => "User Not Found", 'errors' => ['The provided credentials are incorrect.']]);
         }
 
-        return response()->json(['access_token' => $user->createToken($request->device_name)->plainTextToken]);
+        return response()->json(['code' => 200, "message" => "User Not Found", 'access_token' => $user->createToken($request->device_name)->plainTextToken]);
     }
 }
