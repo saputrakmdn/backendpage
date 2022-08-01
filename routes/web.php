@@ -22,3 +22,10 @@ Route::post('/pegawai/store', [App\Http\Controllers\PegawaiController::class, 's
 Route::get('/pegawai/edit/{id}', [App\Http\Controllers\PegawaiController::class, 'edit'])->middleware('auth')->name('pegawai.edit');
 Route::post('/pegawai/update/{id}', [App\Http\Controllers\PegawaiController::class, 'update'])->middleware('auth')->name('pegawai.update');
 Route::post('/pegawai/delete/{id}', [App\Http\Controllers\PegawaiController::class, 'destroy'])->middleware('auth')->name('pegawai.delete');
+
+Route::get('/presensi', [App\Http\Controllers\PresensiController::class, 'index'])->middleware('auth')->name('presensi.index');
+Route::get('/presensi/list', [App\Http\Controllers\PresensiController::class, 'getData'])->middleware('auth')->name('presensi.list');
+Route::get('/izin-keluar', [App\Http\Controllers\IzinKeluarController::class, 'index'])->middleware('auth')->name('izinkeluar.index');
+Route::post('/izin-keluar/update', [App\Http\Controllers\IzinKeluarController::class, 'updateStatus'])->middleware('auth')->name('izinkeluar.update');
+
+

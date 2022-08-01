@@ -264,3 +264,12 @@
        ///asas
     </script>
 @stop
+@section('js')
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        Echo.channel('izin')
+            .listen('NotificationIzin', (e) => {
+                console.log(e.izin);
+            })
+    </script>
+@stop

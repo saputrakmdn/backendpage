@@ -7,6 +7,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "almasaeed2010/adminlte": "~3.2",
+        "beyondcode/laravel-websockets": "^1.13",
         "doctrine/dbal": "^3.3",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -14,7 +15,8 @@
         "laravel/fortify": "^1.13",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.15",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "pusher/pusher-php-server": "~3.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
