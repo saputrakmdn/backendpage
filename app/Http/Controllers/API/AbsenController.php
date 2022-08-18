@@ -20,8 +20,8 @@ class AbsenController extends Controller
 
         if(!is_null($checkIfAbsen))
             return response(["message"=>"Anda Sudah Melakukan Absen"], 423);
-        if($time < "08:30:00"){
-            if ($time < "08:00:00")
+        if($time < "08:00:00"){
+            if ($time < "07:00:00")
                 $keterangan = "hadir";
             else
                 $keterangan = "telat";

@@ -9,12 +9,7 @@
 @section('content')
     <div class="col-12">
         <div class="row">
-            <x-adminlte-info-box title="424" text="Views" icon="fas fa-eye text-dark"
-                                  theme="teal" url="#" url-text="View details" class="col-sm-3 mr-1"/>
-
-            <x-adminlte-info-box title="Downloads" text="1205" icon="fas fa-download text-white"
-                                  theme="purple" class="col-sm-3 mr-1"/>
-
+           
             <x-adminlte-info-box text="{{$total_izin}}" id="izin-keluar" title="Permintaan Izin" icon="fas fa-user-plus text-teal"
                                   theme="primary"  class="col-sm-3" url="{{route('izinkeluar.index')}}"/>
         </div>
